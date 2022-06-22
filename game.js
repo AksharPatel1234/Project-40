@@ -38,7 +38,6 @@ class Game{
     play(){
         
                 form.hide();
-var word = this.name;
 
                 Player.getPlayerInfo();
                 player.getPlayerAtEnd();
@@ -58,15 +57,11 @@ var word = this.name;
                      players[index - 1].y = y;
                        
                      if(index === player.index){
-                        textSize(20);
+                        textSize(50);
                          fill("red");
                          
                          // add code to display the player name on the respective basket
-                       text(allPlayers.name,allPlayers.position.x,allPlayers.position.y)
-
-
-                         
-                       
+                        text(allPlayers[plr].name,allPlayers[plr].positionX,allPlayers[plr].positionY)
                          
                      }
                     
@@ -76,7 +71,6 @@ var word = this.name;
                         text("Player 2 :" + allPlayers.player2.score, 50, 100);
                  
                  }
-                
                 
                 if(player.score>=5){
                     gameState = 2; 
@@ -137,7 +131,7 @@ var word = this.name;
 
     }
     showRank() {
-        alert("Awesome !! You finished the game! You rank is :" +player.rank)
+        alert("Awesome !! You finished the game! Your rank is :" +player.rank)
       }
 
 gameOver() {
